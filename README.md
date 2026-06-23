@@ -45,14 +45,20 @@ Unplug and replug the Teensy after installing the rules.
 ```
 teensy4.1_logger/
 ├── platformio.ini
-├── src/
-│   ├── main.cpp              # setup() and loop()
-│   ├── config.h              # shared constants
-│   ├── sd_logger.h/.cpp      # SD card and log files
-│   ├── line_parser.h/.cpp    # line buffering and SD writes
-│   ├── usb_host_input.h/.cpp # USB host CDC input (only input)
-│   ├── led_status.h/.cpp     # LED feedback
-│   └── diagnostics.h/.cpp    # stats and wiring help
+├── include/                  # headers (.h)
+│   ├── config.h
+│   ├── sd_logger.h
+│   ├── line_parser.h
+│   ├── usb_host_input.h
+│   ├── led_status.h
+│   └── diagnostics.h
+├── src/                      # source (.cpp)
+│   ├── main.cpp
+│   ├── sd_logger.cpp
+│   ├── line_parser.cpp
+│   ├── usb_host_input.cpp
+│   ├── led_status.cpp
+│   └── diagnostics.cpp
 └── .pio/                     # build output (generated)
 ```
 
